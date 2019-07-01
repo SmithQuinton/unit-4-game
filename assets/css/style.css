@@ -1,0 +1,54 @@
+body {
+    background-image: url("darkness.png");
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: white;
+    
+}
+
+header {
+    margin: auto;
+    text-align: center;
+    background: #FA9087;
+    text-decoration: underline;
+}
+
+#rules {
+    background: #781c2e;
+    display: block;
+    width: 500px;
+    height: 600px;
+    margin-left: 20px;
+    float: left;
+}
+
+.score {
+    float: right;
+    background: #9966cc;
+    width: 40%;
+    text-align: center;
+    margin-right: 150px;
+}
+
+.comp-total {
+    float: right;
+    background: #248a67;
+    text-align: center;
+    padding: 40px;
+    width: 20%;
+    margin: 40px;
+}
+
+.score-words {
+    float: right;
+    background: #26619c;
+    text-align: center;
+    padding: 40px;
+    width: 20%;
+    margin: 40px;
+}
+
+#crystals {
+    float: right;
+    margin-right: 70px;
+}
