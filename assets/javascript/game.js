@@ -47,6 +47,24 @@ $("#gem-total").text(goalTotal);
 
 // users's total
 var yourTotal = 0;
+var wins = 0;
+var lose = 0;
+
+function reset(){
+    yourTotal = 0;
+    goalTotal = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+    $("#gem-total").text(goalTotal);
+    $("your-total").text(yourTotal)
+    garnetNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    addGarnetNumbers = garnetNumbers[Math.floor(Math.random() * 12)];
+    stevenNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    addStevenNumbers = stevenNumbers[Math.floor(Math.random() * 12)];
+    amethystNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    addAmethystNumbers = amethystNumbers[Math.floor(Math.random() * 12)];
+    pearlNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    addPearlNumbers = pearlNumbers[Math.floor(Math.random() * 12)];
+}
+
 
 var garnetNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 var addGarnetNumbers = garnetNumbers[Math.floor(Math.random() * 12)];
@@ -58,6 +76,21 @@ $("#Garnet").on("click", function(){
         console.log(yourTotal += addGarnetNumbers);
         console.log(yourTotal);
         $("#your-total").text(yourTotal);
+        if (yourTotal === goalTotal) {
+            alert("You win!");
+            console.log("you win");
+            wins++;
+            console.log(wins);
+            $("#win").text(wins);
+            reset();
+          }
+          else if (yourTotal >= goalTotal) {
+              alert("You Lose. Try Again.");
+              lose++;
+              console.log(lose);
+              $("#losses").text(lose);
+              reset();
+          };
     });
 
 var stevenNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -68,6 +101,21 @@ $("#Steven").on("click", function() {
     console.log(yourTotal += addStevenNumbers);
     console.log(yourTotal);
     $("#your-total").text(yourTotal);
+    if (yourTotal === goalTotal) {
+        alert("You win!");
+        console.log("you win");
+        wins++;
+        console.log(wins);
+        $("#win").text(wins);
+        reset();
+      }
+      else if (yourTotal >= goalTotal) {
+        alert("You Lose. Try Again.");
+        lose++;
+        console.log(lose);
+        $("#losses").text(lose);
+        reset();
+      };
 });
 
 var amethystNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -78,6 +126,21 @@ $("#Amethyst").on("click", function() {
     console.log(yourTotal += addAmethystNumbers);
     console.log(yourTotal);
     $("#your-total").text(yourTotal);
+    if (yourTotal === goalTotal) {
+        alert("You win!");
+        console.log("you win");
+        wins++;
+        console.log(wins);
+        $("#win").text(wins);
+        reset();
+      }
+      else if (yourTotal >= goalTotal) {
+        alert("You Lose. Try Again.");
+        lose++;
+        console.log(lose);
+        $("#losses").text(lose);
+        reset();
+      };
 });
 
 var pearlNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -88,15 +151,31 @@ $("#Pearl").on("click", function() {
     console.log(yourTotal += addPearlNumbers);
     console.log(yourTotal);
     $("#your-total").text(yourTotal);
+    if (yourTotal === goalTotal) {
+        alert("You win!");
+        console.log("you win");
+        wins++;
+        console.log(wins);
+        $("#win").text(wins);
+        reset();
+      }
+      else if (yourTotal >= goalTotal) {
+        alert("You Lose. Try Again.");
+        lose++;
+        console.log(lose);
+        $("#losses").text(lose);
+        reset();
+      };
 });
 
 if (yourTotal === goalTotal) {
     alert("You win!");
+    console.log("you win");
   }
 
-  else if (yourTotal > goalTotal) {
-    alert("You lose!!");
-  };
+//   else if (yourTotal > goalTotal) {
+//     alert("You lose!!");
+//   };
 // // THIRD TIME'S THE CHARM
 // var goalTotal = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 // $("#gem-total").text(goalTotal);
